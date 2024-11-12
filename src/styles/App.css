@@ -1,0 +1,51 @@
+/* Definisikan warna sebagai CSS Variables di :root */
+:root {
+  --kuning-terang: #f5eec2;
+  --hijau-gelap: #416a59;
+  --biru-gelap: #39395f;
+  --hijau-terang: #73a24e;
+  --hijau-olive: #a9c25d;
+}
+
+/* Reset dan Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* Menetapkan font Poppins sebagai font utama */
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Memastikan seluruh body menggunakan font Poppins */
+  background-color: var(--kuning-terang); /* Gunakan warna light yellow untuk latar belakang */
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 20px;
+  background-color: var(--hijau-gelap); /* Latar belakang hijau gelap */
+  color: #fff;
+}
+
+.feature-item {
+  max-width: 300px;
+  text-align: center;
+}
+
+.feature-item h2 {
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.feature-image {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+

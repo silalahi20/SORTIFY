@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
+    <!-- Refined Sorting Bars with better spacing -->
+    <g transform="translate(35, 30)">
+        <!-- Added subtle spacing between bars -->
+        <rect width="12" height="20" fill="#f5eec2" x="0" y="40" rx="2"/>
+        <rect width="12" height="30" fill="#73a24e" x="18" y="30" rx="2"/>
+        <rect width="12" height="40" fill="#a9c25d" x="36" y="20" rx="2"/>
+        <rect width="12" height="50" fill="#416a59" x="54" y="10" rx="2"/>
+        <rect width="12" height="60" fill="#f5eec2" x="72" y="0" rx="2"/>
+    </g>
+    
+    <!-- Refined Text "SORTIFY" with better kerning -->
+    <text x="140" y="80" font-family="Arial Black, sans-serif" font-size="48" font-weight="bold" fill="#f5eec2" letter-spacing="1">
+        SORT<tspan fill="#416a59">IFY</tspan>
+    </text>
+    
+    <!-- Improved arrows design -->
+    <g transform="translate(340, 30)">
+        <!-- Top arrow - more elegant -->
+        <path d="M0 5 L16 5 L8 20 Z" fill="#a9c25d" stroke="#a9c25d" stroke-width="1" stroke-linejoin="round"/>
+        <!-- Bottom arrow - more elegant -->
+        <path d="M0 35 L16 35 L8 50 Z" fill="#73a24e" stroke="#73a24e" stroke-width="1" stroke-linejoin="round"/>
+    </g>
+</svg>

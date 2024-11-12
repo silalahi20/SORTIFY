@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import './styles/App.css';  // Path relatif untuk App.css
+import Header from './components/Header'; // Import the Header component
+import HeroSection from './components/HeroSection';
+import FeaturesSection from './components/FeaturesSection';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <div className="content">
+        <Header /> {/* Header berada di atas */}
+        <HeroSection />
+        <FeaturesSection />
+        {/* Konten lainnya */}
+      </div>
+      <Footer /> {/* Footer berada di bawah */}
     </div>
   );
 }

@@ -1,0 +1,44 @@
+/* Hero Section */
+.hero {
+    background-color: var(--kuning-terang); /* Warna light yellow */
+    height: 100vh; /* Membuat Hero Section mengisi seluruh layar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Pastikan konten tidak mempengaruhi tata letak footer */
+    z-index: 0; /* Menghindari tumpang tindih dengan elemen lain */
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    z-index: 1; /* Menempatkan konten di atas latar belakang */
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    color: var(--hijau-gelap); /* Warna hijau gelap */
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+    color: var(--biru-gelap); /* Warna biru gelap */
+    margin: 20px 0;
+  }
+  
+  .cta-button {
+    background-color: var(--hijau-terang); /* Warna hijau terang untuk tombol */
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: var(--hijau-olive); /* Menggunakan warna olive terang saat hover */
+  }
+  

@@ -1,0 +1,30 @@
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: var(--hijau-gelap); /* Menggunakan warna hijau gelap */
+    color: #fff;
+    z-index: 0; /* Pastikan ini tidak mengganggu layout footer */
+  }
+  
+  .feature-item {
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .feature-item h2 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+  }
+  
+  .feature-item p {
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+  
+  .feature-image {
+    max-width: 100px;
+    margin-bottom: 20px;
+  }
+  

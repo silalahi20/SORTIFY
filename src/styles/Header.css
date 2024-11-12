@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #39395f; /* Dark background for header */
+    color: white;
+    position: fixed; /* Menjadikan header tetap di atas */
+    top: 0; /* Posisi di atas halaman */
+    left: 0; /* Posisi di kiri */
+    width: 100%; /* Membuat header selebar layar */
+    z-index: 1000; /* Pastikan header berada di atas konten lainnya */
+  }
+  
+  .logo-container {
+    flex: 3;
+  }
+  
+  .logo {
+    max-width: 150px;
+  }
+  
+  .nav-links ul {
+    display: flex;
+    gap: 20px; /* Space antar menu */
+    list-style-type: none;
+  }
+  
+  .nav-links li {
+    font-size: 1rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #a9c25d; /* Light green on hover */
+  }

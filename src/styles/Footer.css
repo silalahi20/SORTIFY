@@ -1,0 +1,54 @@
+/* :root untuk mendefinisikan variabel */
+:root {
+    --biru-gelap: #39395f; /* Warna biru gelap untuk footer */
+}
+
+/* Footer Section */
+.footer {
+    background-color: var(--biru-gelap); /* Warna biru gelap untuk footer */
+    color: #fff;
+    text-align: center;
+    padding: 15px 30px; /* Padding lebih kecil agar footer tidak terlalu tinggi */
+    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+    position: relative; /* Memastikan footer tetap di bawah */
+    width: 100%; /* Membuat footer selebar layar */
+    box-sizing: border-box; /* Memastikan padding dihitung dalam lebar total */
+    display: flex; /* Menambahkan flexbox agar konten footer lebih terorganisir */
+    justify-content: center; /* Menjaga footer konten tetap di tengah */
+    align-items: center; /* Menyelaraskan konten di tengah secara vertikal */
+    margin-top: auto; /* Memastikan footer selalu di bawah halaman */
+}
+
+/* Footer Content Styling */
+.footer-content {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem; /* Ukuran font lebih kecil untuk footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Menurunkan jarak antar elemen di dalam footer */
+}
+
+.footer p {
+    margin: 3px 0;
+    font-size: 0.9rem; /* Ukuran font lebih kecil */
+    line-height: 1.4; /* Menjaga spasi antar teks */
+}
+
+/* Pastikan wrapper dan content mengatur tinggi halaman dengan benar */
+body, html {
+    height: 100%; /* Menjamin halaman penuh */
+    margin: 0; /* Menghapus margin default */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Memastikan wrapper mencakup seluruh tinggi halaman */
+}
+
+.content {
+    flex-grow: 1; /* Membuat konten mengisi ruang vertikal yang tersedia */
+}
+
