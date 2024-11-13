@@ -1,8 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-  <!-- Background -->
   <rect width="200" height="200" fill="#f5eec2"/>
   
-  <!-- Bars -->
   <rect x="40" y="50" width="30" height="80" fill="#416a59">
     <animate attributeName="fill" 
              values="#416a59;#39395f;#416a59" 
@@ -23,8 +21,7 @@
              dur="4s" 
              repeatCount="indefinite"/>
   </rect>
-  
-  <!-- Selection indicator -->
+
   <rect x="40" y="140" width="120" height="2" fill="#39395f">
     <animate attributeName="width" 
              values="30;120;30" 
@@ -32,7 +29,6 @@
              repeatCount="indefinite"/>
   </rect>
   
-  <!-- Minimum value indicator -->
   <circle cx="100" cy="150" r="3" fill="#39395f">
     <animate attributeName="cx"
              values="100;85;100"
