@@ -1,44 +1,67 @@
-/* Hero Section */
+
 .hero {
-    background-color: var(--kuning-terang); /* Warna light yellow */
-    height: 100vh; /* Membuat Hero Section mengisi seluruh layar */
+    background-color: var(--biru-gelap); /* Menggunakan warna light yellow */
+    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    position: relative; /* Pastikan konten tidak mempengaruhi tata letak footer */
-    z-index: 0; /* Menghindari tumpang tindih dengan elemen lain */
-  }
-  
-  .hero-content {
-    max-width: 800px;
-    z-index: 1; /* Menempatkan konten di atas latar belakang */
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-    color: var(--hijau-gelap); /* Warna hijau gelap */
-  }
-  
-  .hero p {
-    font-size: 1.25rem;
-    color: var(--biru-gelap); /* Warna biru gelap */
-    margin: 20px 0;
-  }
-  
-  .cta-button {
-    background-color: var(--hijau-terang); /* Warna hijau terang untuk tombol */
+    justify-content: flex-start; /* Konten di mulai dari kiri */
+    align-items: center; /* Vertikal tengah */
+    text-align: left; /* Teks rata kiri */
+    padding-left: 1%; /* Memberikan padding kiri yang cukup untuk memisahkan konten dari tepi */
+    position: relative;
+    overflow: hidden; /* Mencegah konten meluap keluar */
+    background-image: url('/src/img/herosection.svg'); /* Gambar latar */
+    background-size: cover;
+    background-position: center center;
+}
+
+.hero-content {
+    max-width: 600px; /* Mengatur lebar maksimum konten */
+    padding: 40px; /* Padding untuk memberi ruang sekitar teks */
+}
+
+.hero-title {
+    color: var(--kuning-terang); /* Warna teks */
+    font-style: bold; /* Teks tebal */
+    font-family: Poppins, sans-serif; /* Menggunakan font Poppins */
+    font-size: 3rem; /* Ukuran font untuk judul */
+    margin-bottom: 20px; /* Memberikan ruang di bawah judul */
+}
+
+.hero-description {
+    font-family: Poppins, sans-serif; /* Menggunakan font Poppins */
+    font-size: 1.25rem; /* Ukuran font untuk deskripsi */
     color: #fff;
-    padding: 12px 20px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+    margin-bottom: 30px; /* Memberikan ruang di bawah deskripsi */
+}
+
+.cta-button {
+    background-color: var(--hijau-gelap); /* Warna tombol */
+    color: #fff; /* Warna teks tombol */
+    font-family: Poppins, sans-serif; /* Menggunakan font Poppins */
+    padding: 8px 30px; /* Padding tombol */
+    font-size: 1rem; /* Ukuran teks tombol */
+    font-weight: bold; /* Teks tebal */
+    border-radius: 50px; /* Membuat tombol bulat */
+    cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */
+    transition: all 0.3s ease; /* Transisi halus untuk efek */
+}
+
+.cta-button:hover {
+    background-color: var(--hijau-olive); /* Warna saat hover */
+}
+
   
-  .cta-button:hover {
-    background-color: var(--hijau-olive); /* Menggunakan warna olive terang saat hover */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem; /* Menurunkan ukuran font untuk perangkat kecil */
+    }
+    
+    .hero-description {
+      font-size: 1rem;
+    }
+    
+    .cta-button {
+      padding: 10px 20px;
+    }
   }
   

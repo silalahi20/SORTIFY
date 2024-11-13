@@ -1,21 +1,24 @@
 // src/App.js
-import React from 'react';
-import './styles/App.css';  // Path relatif untuk App.css
-import Header from './components/Header'; // Import the Header component
+import React, { useRef } from 'react'; // Import useRef untuk refs
+import './styles/App.css'; 
+import Header from './components/Header'; 
 import HeroSection from './components/HeroSection';
 import FeaturesSection from './components/FeaturesSection';
 import Footer from './components/Footer';
 
 function App() {
+  const featuresRef = useRef(null); // Membuat ref untuk Features Section
+
+  const scrollToFeatures = () => {
+    featuresRef.current.scrollIntoView({ behavior: 'smooth' }); // Fungsi untuk autoscroll ke Features Section
+  };
+
   return (
     <div className="wrapper">
-      <div className="content">
-        <Header /> {/* Header berada di atas */}
-        <HeroSection />
-        <FeaturesSection />
-        {/* Konten lainnya */}
-      </div>
-      <Footer /> {/* Footer berada di bawah */}
+      <Header /> {/* Header at the top */}
+      <HeroSection onCTAClick={scrollToFeatures} /> {/* Passing the scroll function as a prop */}
+      <FeaturesSection ref={featuresRef} /> {/* Attaching ref to Features Section */}
+      <Footer />
     </div>
   );
 }

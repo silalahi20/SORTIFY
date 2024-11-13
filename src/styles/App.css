@@ -1,4 +1,4 @@
-/* Definisikan warna sebagai CSS Variables di :root */
+/* :root untuk mendefinisikan variabel */
 :root {
   --kuning-terang: #f5eec2;
   --hijau-gelap: #416a59;
@@ -20,32 +20,17 @@ body {
   background-color: var(--kuning-terang); /* Gunakan warna light yellow untuk latar belakang */
 }
 
-/* Features Section */
-.features {
+body, html {
+  height: 100%; /* Pastikan body dan html mengisi seluruh tinggi layar */
+  margin: 0; /* Menghapus margin default */
+}
+
+.wrapper {
   display: flex;
-  justify-content: space-around;
-  padding: 50px 20px;
-  background-color: var(--hijau-gelap); /* Latar belakang hijau gelap */
-  color: #fff;
+  flex-direction: column;
+  min-height: 100vh; /* Pastikan wrapper mencakup seluruh tinggi halaman */
 }
 
-.feature-item {
-  max-width: 300px;
-  text-align: center;
+.content {
+  flex-grow: 1; /* Konten akan mengisi ruang vertikal yang tersedia */
 }
-
-.feature-item h2 {
-  font-size: 1.75rem;
-  margin-bottom: 10px;
-}
-
-.feature-item p {
-  font-size: 1.125rem;
-  line-height: 1.5;
-}
-
-.feature-image {
-  max-width: 100px;
-  margin-bottom: 20px;
-}
-

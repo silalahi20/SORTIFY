@@ -1,19 +1,20 @@
+/* Header Styling */
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Menyebar elemen di header */
     align-items: center;
     padding: 10px 30px;
-    background-color: #39395f; /* Dark background for header */
+    background-color:var(--biru-gelap); /* Dark background */
     color: white;
-    position: fixed; /* Menjadikan header tetap di atas */
-    top: 0; /* Posisi di atas halaman */
-    left: 0; /* Posisi di kiri */
-    width: 100%; /* Membuat header selebar layar */
-    z-index: 1000; /* Pastikan header berada di atas konten lainnya */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
   }
   
   .logo-container {
-    flex: 3;
+    flex: 1; /* Menyediakan ruang untuk logo */
   }
   
   .logo {
@@ -40,3 +41,27 @@
   .nav-links a:hover {
     color: #a9c25d; /* Light green on hover */
   }
+  
+  /* Get Started Button */
+  .get-started {
+    background-color: var(--hijau-gelap); /* Hijau terang */
+    color:white; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    padding: 8px 16px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 20px; /* Sedikit jarak dari menu terakhir */
+  }
+  
+  .get-started:hover {
+    background-color: var(--hijau-terang);
+    color: var(--biru-gelap); /* Olive saat hover */
+    transform: translateY(-5px);
+  }
+  

@@ -17,6 +17,7 @@ const Header = () => {
           <li><a href="#about-us">About Us</a></li>
         </ul>
       </nav>
+      <a href="#get-started" className="get-started">Get Started</a> {/* Tombol Get Started */}
     </header>
   );
 };

@@ -1,30 +1,35 @@
 /* Features Section */
 .features {
+    background-color: var(--biru-gelap); /* Menggunakan warna biru gelap */
+    height: 100vh;
     display: flex;
-    justify-content: space-around;
-    padding: 50px 20px;
-    background-color: var(--hijau-gelap); /* Menggunakan warna hijau gelap */
+    justify-content: flex-end; /* Konten di mulai dari kanan */
+    align-items: center; /* Vertikal tengah */
+    text-align: left; /* Teks rata kanan */
+    padding-right: 1%; /* Memberikan padding kanan yang cukup untuk memisahkan konten dari tepi */
+    position: relative;
+    overflow: hidden; /* Mencegah konten meluap keluar */
+    background-image: url('/src/img/featuresection.svg'); /* Gambar latar */
+    background-size: cover;
+    background-position: center center;
+}
+
+.features-content {
+    max-width: 600px; /* Mengatur lebar maksimum konten */
+    padding: 40px; /* Padding untuk memberi ruang sekitar teks */
+}
+
+.features-title {
+    color: var(--kuning-terang); /* Warna teks */
+    font-style: bold; /* Teks tebal */
+    font-family: Poppins, sans-serif; /* Menggunakan font Poppins */
+    font-size: 3rem; /* Ukuran font untuk judul */
+    margin-bottom: 20px; /* Memberikan ruang di bawah judul */
+}
+
+.features-description {
+    font-family: Poppins, sans-serif; /* Menggunakan font Poppins */
+    font-size: 1.25rem; /* Ukuran font untuk deskripsi */
     color: #fff;
-    z-index: 0; /* Pastikan ini tidak mengganggu layout footer */
-  }
-  
-  .feature-item {
-    max-width: 300px;
-    text-align: center;
-  }
-  
-  .feature-item h2 {
-    font-size: 1.75rem;
-    margin-bottom: 10px;
-  }
-  
-  .feature-item p {
-    font-size: 1.125rem;
-    line-height: 1.5;
-  }
-  
-  .feature-image {
-    max-width: 100px;
-    margin-bottom: 20px;
-  }
-  
+    margin-bottom: 30px; /* Memberikan ruang di bawah deskripsi */
+}
