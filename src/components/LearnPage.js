@@ -36,8 +36,8 @@ const LearnPage = () => {
         <img src="backbutton1.svg" alt="Back" />
       </button>
       <div className="learn-header">
-        <h1 classname="learn-title">Learn Sorting Algorithms</h1>
-        <p classname="learn-description">Learn the basics of sorting algorithms and their complexities.</p>
+        <h1 className="learn-title">Learn Sorting Algorithms</h1>
+        <p className="learn-description">Learn the basics of sorting algorithms and their complexities.</p>
       </div>
       <div className="algorithms-container">
         {algorithms.map((algo, index) => (

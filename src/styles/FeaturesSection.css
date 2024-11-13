@@ -46,6 +46,8 @@
 }
 
 .explore-button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
     margin-top: auto; /* Akan menempatkan tombol di bagian bawah content item */
     padding: 10px 20px;
     background-color: var(--biru-gelap); /* Warna tombol yang sesuai dengan theme */
