@@ -1,7 +1,8 @@
 // src/components/Header.js
 import React from 'react';
-import logo from '../img/logo.svg'; // Importing the logo from the img folder
-import '../styles/Header.css'; // Ensure the correct import path for the CSS
+import { Link } from 'react-router-dom';
+import logo from '../img/logo.svg';
+import '../styles/Header.css';
 
 const Header = () => {
   return (
@@ -11,13 +12,13 @@ const Header = () => {
       </div>
       <nav className="nav-links">
         <ul>
-          <li><a href="#learn">Learn</a></li>
-          <li><a href="#practice">Practice</a></li>
-          <li><a href="#test">Test</a></li>
-          <li><a href="#about-us">About Us</a></li>
+          <li><Link to="/learn">Learn</Link></li>
+          <li><Link to="/practice">Practice</Link></li>
+          <li><Link to="/test">Test</Link></li>
+          <li><Link to="/about-us">About Us</Link></li>
         </ul>
       </nav>
-      <a href="#get-started" className="get-started">Get Started</a> {/* Tombol Get Started */}
+      <Link to="/get-started" className="get-started">Get Started</Link>
     </header>
   );
 };

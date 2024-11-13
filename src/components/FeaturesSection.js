@@ -1,22 +1,29 @@
+// export default FeaturesSection;
 import React, { forwardRef } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate untuk navigasi
 import '../styles/FeaturesSection.css';
 
 const FeaturesSection = forwardRef((props, ref) => {
+  const navigate = useNavigate(); // Hook navigasi
+
   const features = [
     {
-      title: "Bubble Sort",
-      description: "Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order. This algorithm is not suitable for large data sets as its average and worst-case time complexity are quite high.",
-      img: 'bubble-sort.svg' // Jalur relatif dari posisi file JS ke file gambar
+      title: "Learn",
+      description: "Learn about basic sorting algorithms. Equipped with material and visuals that help you to understand sorting algorithms better!",
+      img: 'learn.svg',
+      link: '/learn' // Tentukan link yang sesuai
     },
     {
-      title: "Selection Sort",
-      description: "Selection Sort is a comparison-based sorting algorithm. It sorts an array by repeatedly selecting the smallest (or largest) element from the unsorted portion and swapping it with the first unsorted element. This process continues until the entire array is sorted.",
-      img: "selection-sort.svg" // Jalur relatif yang benar
+      title: "Practice",
+      description: "Interactive training media that allows you to practice sorting algorithm skills with cool visualization. There's no such thing as not being able to do it if you practice with SORTIFY!",
+      img: "practice.svg",
+      link: '/practice' // Tentukan link yang sesuai
     },
     {
-      title: "Insertion Sort",
-      description: "Insertion sort is a simple sorting algorithm that works by iteratively inserting each element of an unsorted list into its correct position in a sorted portion of the list. It is like sorting playing cards in your hands!",
-      img: "insertion-sort.svg" // Jalur relatif yang benar
+      title: "Test",
+      description: "Test your understanding of basic sorting algorithms with exercises that are comprehensive, interesting, and can be done by all groups of people. Work hard and study hard!",
+      img: "test.svg",
+      link: '/test' // Tentukan link yang sesuai
     }
   ];
 
@@ -24,14 +31,15 @@ const FeaturesSection = forwardRef((props, ref) => {
     <section ref={ref} className="features">
       <div className="features-header">
         <h1 className="features-title">Discover SORTIFY Sorting Algorithms!</h1>
-        <p className="features-description">Sortify is an interactive learning platform for learning basic sorting algorithms. Get ready and excited to learn with Sortify!</p>
+        <p className="features-description">SORTIFY is an interactive learning platform for learning basic sorting algorithms. Get ready and excited to learn with SORTIFY!</p>
       </div>
       <div className="features-content">
-        {features.map(feature => (
-          <div key={feature.title} className="feature-item">
+        {features.map((feature, index) => (
+          <div key={index} className="feature-item">
             <h2>{feature.title}</h2>
             <img src={feature.img} alt={`${feature.title} Diagram`} style={{ width: '200px', height: '200px' }}/>
             <p>{feature.description}</p>
+            <button onClick={() => navigate(feature.link)} className="explore-button">Explore</button>
           </div>
         ))}
       </div>

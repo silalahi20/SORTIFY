@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <!-- Background with subtle pulse -->
+    <circle cx="100" cy="100" r="90" fill="#f5eec2">
+        <animate attributeName="r" 
+                 values="90;92;90"
+                 dur="2s"
+                 repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Code window frame -->
+    <rect x="40" y="40" width="120" height="120" rx="5" fill="#416a59"/>
+    <rect x="45" y="45" width="110" height="110" rx="3" fill="#39395f"/>
+    
+    <!-- Window controls -->
+    <circle cx="55" cy="55" r="3" fill="#f5eec2"/>
+    <circle cx="65" cy="55" r="3" fill="#73a24e"/>
+    <circle cx="75" cy="55" r="3" fill="#a9c25d"/>
+    
+    <!-- Animated sorting visualization -->
+    <g transform="translate(0,20)">
+        <!-- Array bars with height animation -->
+        <rect x="60" y="50" width="15" height="40" fill="#73a24e">
+            <animate attributeName="height"
+                     values="40;60;40"
+                     dur="2s"
+                     repeatCount="indefinite"/>
+            <animate attributeName="y"
+                     values="50;30;50"
+                     dur="2s"
+                     repeatCount="indefinite"/>
+        </rect>
+        
+        <rect x="80" y="50" width="15" height="30" fill="#a9c25d">
+            <animate attributeName="height"
+                     values="30;40;30"
+                     dur="2s"
+                     begin="0.4s"
+                     repeatCount="indefinite"/>
+            <animate attributeName="y"
+                     values="50;40;50"
+                     dur="2s"
+                     begin="0.4s"
+                     repeatCount="indefinite"/>
+        </rect>
+        
+        <rect x="100" y="50" width="15" height="50" fill="#73a24e">
+            <animate attributeName="height"
+                     values="50;30;50"
+                     dur="2s"
+                     begin="0.8s"
+                     repeatCount="indefinite"/>
+            <animate attributeName="y"
+                     values="50;70;50"
+                     dur="2s"
+                     begin="0.8s"
+                     repeatCount="indefinite"/>
+        </rect>
+        
+        <rect x="120" y="50" width="15" height="20" fill="#a9c25d">
+            <animate attributeName="height"
+                     values="20;50;20"
+                     dur="2s"
+                     begin="1.2s"
+                     repeatCount="indefinite"/>
+            <animate attributeName="y"
+                     values="50;20;50"
+                     dur="2s"
+                     begin="1.2s"
+                     repeatCount="indefinite"/>
+        </rect>
+    </g>
+    
+    <!-- Animated comparison arrows -->
+    <g stroke="#f5eec2" stroke-width="2">
+        <path d="M65,120 L90,120 M77.5,115 L90,120 L77.5,125">
+            <animate attributeName="opacity"
+                     values="0;1;0"
+                     dur="2s"
+                     repeatCount="indefinite"/>
+        </path>
+        
+        <path d="M105,120 L130,120 M117.5,115 L130,120 L117.5,125">
+            <animate attributeName="opacity"
+                     values="0;1;0"
+                     dur="2s"
+                     begin="1s"
+                     repeatCount="indefinite"/>
+        </path>
+    </g>
+    
+    <!-- Code lines -->
+    <g stroke="#f5eec2" stroke-width="1">
+        <line x1="55" y1="85" x2="85" y2="85">
+            <animate attributeName="x2"
+                     values="85;100;85"
+                     dur="3s"
+                     repeatCount="indefinite"/>
+        </line>
+        <line x1="55" y1="90" x2="75" y2="90">
+            <animate attributeName="x2"
+                     values="75;95;75"
+                     dur="3s"
+                     begin="0.5s"
+                     repeatCount="indefinite"/>
+        </line>
+        <line x1="55" y1="95" x2="80" y2="95">
+            <animate attributeName="x2"
+                     values="80;90;80"
+                     dur="3s"
+                     begin="1s"
+                     repeatCount="indefinite"/>
+        </line>
+    </g>
+</svg>

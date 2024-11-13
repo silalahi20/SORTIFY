@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center; /* Center content vertically */
     justify-content: center; /* Center content horizontally */
-    padding: 40px 5%;
+    padding: 65px 5%;
     min-height: 100vh; /* Minimum height to cover the full viewport */
     position: relative;
     font-family: 'Poppins', sans-serif; /* Using Poppins font for consistency */
@@ -25,7 +25,7 @@
 
 .features-title {
     color: var(--biru-gelap);
-    font-size: 3rem; /* Large font size for impact */
+    font-size: 2.5rem; /* Large font size for impact */
     margin-bottom: 10px; /* Space below the title */
 }
 
@@ -36,6 +36,7 @@
 
 .features-content {
     width: 100%;
+    margin-top: 0px; /* Space above the grid */
     color: var(--biru-gelap);
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Creates three columns */
@@ -44,21 +45,42 @@
     justify-content: center; /* Center grid items horizontally */
 }
 
+.explore-button {
+    margin-top: auto; /* Akan menempatkan tombol di bagian bawah content item */
+    padding: 10px 20px;
+    background-color: var(--biru-gelap); /* Warna tombol yang sesuai dengan theme */
+    color: #ffffff; /* Warna teks */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.explore-button:hover {
+    background-color: var(--biru-terang); /* Gelapkan sedikit saat hover */
+    transform: scale(1.1); /* Membesarkan tombol sedikit saat di-hover */
+}
+
+/* Pastikan setiap item memiliki ukuran yang konsisten dan tidak berubah saat konten bertambah */
 .feature-item {
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-    border-radius: 8px;
-    padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content inside each feature item */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    justify-content: space-between; /* Rapihkan konten dan tombol */
+    align-items: center; /* Pusatkan semua konten */
+    padding: 20px;
+    /* gap: 5px; */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    height: 450px; /* Tinggi tetap untuk memastikan semua kotak sama */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-item:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
+
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
