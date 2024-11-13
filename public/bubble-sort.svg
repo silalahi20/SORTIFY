@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#f5eec2"/>
+  
+  <!-- Bars -->
+  <rect x="40" y="50" width="30" height="80" fill="#416a59">
+    <animate attributeName="x" 
+             values="40;85;40" 
+             dur="2s" 
+             repeatCount="indefinite"/>
+    <animate attributeName="fill"
+             values="#416a59;#73a24e;#416a59"
+             dur="2s"
+             repeatCount="indefinite"/>
+  </rect>
+  
+  <rect x="85" y="50" width="30" height="60" fill="#73a24e">
+    <animate attributeName="x" 
+             values="85;40;85" 
+             dur="2s" 
+             repeatCount="indefinite"/>
+    <animate attributeName="fill"
+             values="#73a24e;#416a59;#73a24e"
+             dur="2s"
+             repeatCount="indefinite"/>
+  </rect>
+  
+  <rect x="130" y="50" width="30" height="40" fill="#a9c25d"/>
+  
+  <!-- Comparison indicator -->
+  <path d="M 55 150 L 55 170 L 100 170 L 100 150" fill="none" stroke="#39395f" stroke-width="2">
+    <animate attributeName="opacity"
+             values="1;0;1"
+             dur="2s"
+             repeatCount="indefinite"/>
+  </path>
+</svg>

@@ -1,35 +1,80 @@
-/* Features Section */
+/* Features Section Styling */
 .features {
-    background-color: var(--biru-gelap); /* Menggunakan warna biru gelap */
-    height: 100vh;
+    background-color: var(--biru-gelap); /* Dark blue background for elegance */
     display: flex;
-    justify-content: flex-end; /* Konten di mulai dari kanan */
-    align-items: center; /* Vertikal tengah */
-    text-align: left; /* Teks rata kanan */
-    padding-right: 1%; /* Memberikan padding kanan yang cukup untuk memisahkan konten dari tepi */
+    flex-direction: column;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    padding: 40px 5%;
+    min-height: 100vh; /* Minimum height to cover the full viewport */
     position: relative;
-    overflow: hidden; /* Mencegah konten meluap keluar */
-    background-image: url('/src/img/featuresection.svg'); /* Gambar latar */
+    font-family: 'Poppins', sans-serif; /* Using Poppins font for consistency */
+    color: #ffffff; /* White text color for contrast */
+    background-image: url('/src/img/featuresection.svg');
     background-size: cover;
     background-position: center center;
 }
 
-.features-content {
-    max-width: 600px; /* Mengatur lebar maksimum konten */
-    padding: 40px; /* Padding untuk memberi ruang sekitar teks */
+.features-header {
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    color: var(--biru-gelap);
+    max-width: 1200px;
+    margin-bottom: 20px; /* Space between the header and the boxes */
 }
 
 .features-title {
-    color: var(--kuning-terang); /* Warna teks */
-    font-style: bold; /* Teks tebal */
-    font-family: Poppins, sans-serif; /* Menggunakan font Poppins */
-    font-size: 3rem; /* Ukuran font untuk judul */
-    margin-bottom: 20px; /* Memberikan ruang di bawah judul */
+    color: var(--biru-gelap);
+    font-size: 3rem; /* Large font size for impact */
+    margin-bottom: 10px; /* Space below the title */
 }
 
 .features-description {
-    font-family: Poppins, sans-serif; /* Menggunakan font Poppins */
-    font-size: 1.25rem; /* Ukuran font untuk deskripsi */
-    color: #fff;
-    margin-bottom: 30px; /* Memberikan ruang di bawah deskripsi */
+    font-size: 1.5rem; /* Comfortable reading size */
+    margin-bottom: 20px; /* Space below the description */
+}
+
+.features-content {
+    width: 100%;
+    color: var(--biru-gelap);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three columns */
+    grid-gap: 20px; /* Space between columns */
+    align-items: start; /* Align items to start at the same top line */
+    justify-content: center; /* Center grid items horizontally */
+}
+
+.feature-item {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content inside each feature item */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .features-title {
+        font-size: 2.5rem; /* Smaller font size for small screens */
+    }
+
+    .features-description {
+        font-size: 1.25rem; /* Smaller font size for descriptions on small screens */
+    }
+
+    .features {
+        padding: 20px; /* Less padding on smaller screens */
+    }
+
+    .features-content {
+        grid-template-columns: 1fr; /* Single column layout on small screens */
+    }
 }

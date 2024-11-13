@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#f5eec2"/>
+  
+  <!-- Bars -->
+  <rect x="40" y="50" width="30" height="80" fill="#416a59">
+    <animate attributeName="fill" 
+             values="#416a59;#39395f;#416a59" 
+             dur="2s" 
+             repeatCount="indefinite"/>
+  </rect>
+  
+  <rect x="85" y="50" width="30" height="40" fill="#73a24e">
+    <animate attributeName="x" 
+             values="85;130;85" 
+             dur="4s" 
+             repeatCount="indefinite"/>
+  </rect>
+  
+  <rect x="130" y="50" width="30" height="60" fill="#a9c25d">
+    <animate attributeName="x" 
+             values="130;85;130" 
+             dur="4s" 
+             repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Selection indicator -->
+  <rect x="40" y="140" width="120" height="2" fill="#39395f">
+    <animate attributeName="width" 
+             values="30;120;30" 
+             dur="2s" 
+             repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Minimum value indicator -->
+  <circle cx="100" cy="150" r="3" fill="#39395f">
+    <animate attributeName="cx"
+             values="100;85;100"
+             dur="2s"
+             repeatCount="indefinite"/>
+  </circle>
+</svg>
