@@ -1,67 +1,66 @@
 /* Header Styling */
 .header {
-    display: flex;
-    justify-content: space-between; /* Menyebar elemen di header */
-    align-items: center;
-    padding: 10px 30px;
-    background-color:var(--biru-gelap); /* Dark background */
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-  
-  .logo-container {
-    flex: 1; /* Menyediakan ruang untuk logo */
-  }
-  
-  .logo {
-    max-width: 150px;
-  }
-  
-  .nav-links ul {
-    display: flex;
-    gap: 20px; /* Space antar menu */
-    list-style-type: none;
-  }
-  
-  .nav-links li {
-    font-size: 1rem;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links a:hover {
-    color: #a9c25d; /* Light green on hover */
-  }
-  
-  /* Get Started Button */
-  .get-started {
-    background-color: var(--hijau-gelap); /* Hijau terang */
-    color:white; 
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    padding: 8px 16px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-    margin-left: 20px; /* Sedikit jarak dari menu terakhir */
-  }
-  
-  .get-started:hover {
-    background-color: var(--hijau-terang);
-    color: var(--biru-gelap); /* Olive saat hover */
-    transform: translateY(-5px);
-  }
-  
+  display: flex;
+  justify-content: space-between; /* Menyebar elemen di header */
+  align-items: center;
+  padding: 10px 30px;
+  background-color:var(--biru-gelap); /* Dark background */
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo-container {
+  flex: 1; /* Menyediakan ruang untuk logo */
+}
+
+.logo {
+  max-width: 150px;
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 20px; /* Space antar menu */
+  list-style-type: none;
+}
+
+.nav-links li {
+  font-size: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #a9c25d; /* Light green on hover */
+}
+
+/* Get Started Button */
+.login {
+  background-color: var(--hijau-gelap); /* Hijau terang */
+  color:white; 
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  padding: 9px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 20px; /* Sedikit jarak dari menu terakhir */
+}
+
+.login:hover {
+  background-color: var(--hijau-terang);
+  color: var(--biru-gelap); /* Olive saat hover */
+  transform: translateY(-5px);
+}

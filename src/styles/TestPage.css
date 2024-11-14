@@ -1,0 +1,140 @@
+:root {
+    --kuning-terang: #f5eec2;
+    --hijau-gelap: #416a59;
+    --biru-gelap: #39395f;
+    --biru-terang: #67678F;
+    --hijau-terang: #73a24e;
+    --hijau-olive: #a9c25d;
+}
+
+.test-page {
+    background-color: var(--kuning-terang);
+    color: var(--biru-gelap);
+    padding: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.question-card {
+    width: 400px; /* Ukuran tetap yang lebih lebar untuk tampilan */
+    min-height: 200px; /* Menambahkan tinggi minimum */
+    background-color: var(--biru-terang);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: var(--hijau-terang);
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+
+button:hover {
+    background-color: var(--hijau-olive);
+}
+
+.results {
+    background-color: var(--hijau-gelap);
+    color: var(--kuning-terang);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+.option-button {
+    width: 100%;
+    text-align: left;
+    padding: 8px;
+    margin: 5px 0;
+    background-color: var(--hijau-terang);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.option-button:hover {
+    background-color: var(--hijau-olive);
+}
+
+.option-button.selected-option {
+    background-color: #FFCC00; /* Warna penanda untuk pilihan yang dipilih */
+    color: #39395f; /* Warna teks kontras */
+}
+
+.input-answer {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.input-answer:focus {
+    border-color: #4CAF50;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.navigation-buttons button {
+    padding: 8px 20px;
+    background-color: var(--hijau-terang);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navigation-buttons button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.test-welcome {
+    text-align: center;
+    padding: 150px;
+    background-color: var(--kuning-terang);
+    border-radius: 10px;
+}
+
+.test-welcome h1 {
+    color: var(--biru-gelap);
+}
+
+.test-welcome p {
+    color: var(--biru-gelap); /* Mengganti --biru-darker menjadi --biru-gelap */
+    margin: 20px 0;
+}
+
+.test-welcome button {
+    padding: 10px 20px;
+    background-color: var(--hijau-terang);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.test-welcome button:hover {
+    background-color: var(--hijau-olive);
+}

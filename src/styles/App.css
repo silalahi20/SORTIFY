@@ -18,7 +18,7 @@
 
 body {
   font-family: 'Poppins', sans-serif; /* Memastikan seluruh body menggunakan font Poppins */
-  background-color: var(--kuning-terang); /* Gunakan warna light yellow untuk latar belakang */
+  background-color: var(--b); /* Gunakan warna light yellow untuk latar belakang */
 }
 
 body, html {

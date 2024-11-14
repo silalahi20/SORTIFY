@@ -1,43 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
-.bubble-sort-container {
+.selection-sort-container {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  padding: 120px;
+  padding: 20px;
   background: #dbe8f5;
   color: #2d3436;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.input-container {
-  margin: 20px 0;
-}
-
-.input-container input {
-  padding: 8px 15px;
-  border: 1px solid #ccc;
+.number-input {
+  padding: 8px;
+  margin: 0 10px;
+  border: 1px solid #75B9BE;
   border-radius: 5px;
   font-family: 'Poppins', sans-serif;
-  margin-right: 10px;
-}
-
-.input-container button {
-  padding: 8px 15px;
-  border: none;
-  background: #75B9BE;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  transition: all 0.3s ease;
-}
-
-.input-container button:hover {
-  background: linear-gradient(45deg, #74b9ff, #a29bfe);
 }
 
 .number-container {
@@ -63,33 +44,9 @@
   width: 50px;
 }
 
-.number:not(.sorted):hover {
+.number:not(.sorted-element):hover {
   transform: scale(1.1);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.number.highlighted {
-  background-color: #74b9ff;
-  color: white;
-  cursor: grab;
-  animation: highlight-pulse 1s infinite;
-}
-
-.number.sorted {
-  background-color: #28a745;
-  color: white;
-  cursor: default;
-}
-
-.status-text {
-  margin: 15px 0;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: transparent;
-  font-size: 1.1em;
-  color: #d63031;
-  text-align: center;
-  font-weight: bold;
 }
 
 .controls {
@@ -103,8 +60,8 @@
   padding: 8px 15px;
   background: #d7327a;
   color: white;
-  border-radius: 20px;
   border: none;
+  border-radius: 20px;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
   transition: all 0.3s ease;
@@ -119,13 +76,49 @@
   cursor: not-allowed;
 }
 
-@keyframes highlight-pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+#status-text {
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  font-size: 1.1em;
+  color: #d63031;
+  text-align: center;
+  font-weight: bold;
 }
 
-/* Responsiveness */
+.current-element {
+  background-color: #007bff !important;
+  color: white;
+  border-color: #0056b3;
+  cursor: grab !important;
+}
+
+.sorted-element {
+  background-color: #28a745 !important;
+  color: white;
+  border-color: #1e7e34;
+}
+
+.number-container.sorted-complete .number {
+  cursor: default;
+  pointer-events: none;
+}
+
+.number-container.sorted-complete .number:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.back-button {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .controls {
     flex-direction: column;
@@ -137,28 +130,25 @@
   }
 
   .number {
-    padding: 10px;
     font-size: 1rem;
+    padding: 12px;
     width: 40px;
   }
 }
 
 @media (max-width: 480px) {
-  .input-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .input-container input,
-  .input-container button {
-    width: 100%;
-    margin: 0;
+  .selection-sort-container {
+    padding: 10px;
   }
 
   .number {
-    padding: 8px;
     font-size: 0.9rem;
+    padding: 10px;
     width: 35px;
+  }
+
+  .controls button {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
   }
 }

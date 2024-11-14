@@ -24,7 +24,7 @@
                 },
                 {
                   name: "Insertion Sort",
-                  description: "Insertion Sort is a comparison sorting-based algorithm. It sorts an array by iteratively taking each element from the unsorted portion and placing it in its appropriate position. This process continues by moving the boundary between the sorted and unsorted parts one element at a time.",
+                  description: "Insertion Sort is a comparison sorting-based algorithm. It sorts an array by iteratively taking each element from the unsorted portion and placing it in its appropriate position.Algorithms moving the boundary between the sorted and unsorted parts one element at a time.",
                   complexity: "Average Time Complexity: O(n^2)",
                   img: "insertion-sort.svg"
                 }

@@ -2,17 +2,16 @@ import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/InsertionSortPractice.css';
 
-
 const InsertionSortPractice = () => {
-    const navigate =useNavigate();
-    const [numbers, setNumbers] = useState([]);
-    const [initialNumbers, setInitialNumbers] = useState([]);
-    const [currentIndex, setCurrentIndex] = useState(1);
-    const [isStarted, setIsStarted] = useState(false);
-    const [compareIndex, setCompareIndex] = useState(0);
-    const [statusText, setStatusText] = useState('');
-    const [draggedElementIndex, setDraggedElementIndex] = useState(null);
-    const nextButtonRef = useRef(null);
+  const navigate = useNavigate();
+  const [numbers, setNumbers] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(1);
+  const [isStarted, setIsStarted] = useState(false);
+  const [compareIndex, setCompareIndex] = useState(0);
+  const [statusText, setStatusText] = useState('');
+  const [draggedElementIndex, setDraggedElementIndex] = useState(null);
+  const [sortedIndices, setSortedIndices] = useState([]);
+  const initialNumbersRef = useRef([]);
 
   const generateNumbers = () => {
     const count = parseInt(document.getElementById('numCount').value);
@@ -25,11 +24,10 @@ const InsertionSortPractice = () => {
     
     const newNumbers = pool.slice(0, count);
     setNumbers(newNumbers);
-    setInitialNumbers([...newNumbers]);
-    resetHighlight();
-    if (nextButtonRef.current) {
-      nextButtonRef.current.disabled = true;
-    }
+    initialNumbersRef.current = [...newNumbers];
+    setSortedIndices([]);
+    setStatusText('');
+    setIsStarted(false);
   };
 
   const displayNumbers = () => {
@@ -37,14 +35,15 @@ const InsertionSortPractice = () => {
       <div
         key={index}
         className={`number ${
-          index === currentIndex ? 'current-element' : ''
-        } ${
-          index === compareIndex && isStarted ? 'compared-element' : ''
-        } ${
-          isStarted && index < currentIndex && index !== compareIndex ? 'sorted-element' : ''
+          sortedIndices.includes(index)
+            ? 'sorted-element'
+            : index === currentIndex
+            ? 'current-element'
+            : index === compareIndex && isStarted
+            ? 'compared-element'
+            : ''
         }`}
-        draggable={index === currentIndex || index === compareIndex}
-        id={`num-${index}`}
+        draggable={isStarted && (index === currentIndex || index === compareIndex)}
         onDragStart={() => dragStart(index)}
         onDrop={() => drop(index)}
         onDragOver={(e) => allowDrop(e)}
@@ -57,7 +56,8 @@ const InsertionSortPractice = () => {
   const startSorting = () => {
     setCurrentIndex(1);
     setIsStarted(true);
-    setStatusText(`Bilangan ${numbers[0]} sudah pada posisinya. Silakan klik Next!`);
+    setSortedIndices([0]);
+    setStatusText('Sorting dimulai...');
     highlightCurrentElement();
   };
 
@@ -75,9 +75,6 @@ const InsertionSortPractice = () => {
       setStatusText(
         `Bilangan ${numbers[currentIndex]} lebih kecil daripada ${numbers[index]}. Silakan tukar posisi ${numbers[currentIndex]} dengan ${numbers[index]}!`
       );
-      if (nextButtonRef.current) {
-        nextButtonRef.current.disabled = true;
-      }
     } else {
       let hasLargerElementToLeft = false;
       for (let i = index - 1; i >= 0; i--) {
@@ -92,22 +89,14 @@ const InsertionSortPractice = () => {
         highlightComparedElement(index - 1);
       } else {
         setStatusText(`Bilangan ${numbers[currentIndex]} sudah pada posisinya. Silakan klik Next!`);
-        if (nextButtonRef.current) {
-          nextButtonRef.current.disabled = false;
-        }
+        setSortedIndices(prev => [...prev, currentIndex]);
       }
     }
-  };
-
-  const resetHighlight = () => {
-    setStatusText('');
   };
 
   const dragStart = (index) => {
     if (index === currentIndex || index === compareIndex) {
       setDraggedElementIndex(index);
-    } else {
-      setDraggedElementIndex(null);
     }
   };
 
@@ -181,57 +170,56 @@ const InsertionSortPractice = () => {
   const completeSorting = () => {
     setIsStarted(false);
     setStatusText('Insertion Sort Complete!');
-    if (nextButtonRef.current) {
-      nextButtonRef.current.disabled = true;
-    }
   };
 
   const resetNumbers = () => {
-    setNumbers([...initialNumbers]);
+    setNumbers([...initialNumbersRef.current]);
+    setSortedIndices([]);
     setIsStarted(false);
     setStatusText('');
-    resetHighlight();
   };
 
   return (
     <div className="insertion-sort-container">
-      {/* Back button with SVG icon */}
       <div className="back-button" onClick={() => navigate('/practice')}>
         <img src="/backbutton1.svg" alt="Back" />
       </div>
-      <div className="input-section">
-        <label htmlFor="numCount">Masukkan Jumlah Angka (max 10):</label>
+      <div>
+        <label htmlFor="numCount">Masukkan Jumlah Angka (maks 10): </label>
         <input
           type="number"
           id="numCount"
           min="1"
           max="10"
+          className="number-input"
           defaultValue="5"
         />
         <button onClick={generateNumbers}>Generate Angka</button>
       </div>
 
-      <div id="number-container" className={`number-container ${!isStarted ? '' : 'active'}`}>
+      <div
+        id="number-container"
+        className={`number-container ${!isStarted ? 'sorted-complete' : ''}`}
+      >
         {displayNumbers()}
       </div>
-
-      <div id="status-text">{statusText}</div>
 
       <div className="controls">
         <button onClick={startSorting} disabled={isStarted || numbers.length === 0}>
           Start
         </button>
         <button
-          ref={nextButtonRef}
           onClick={nextStep}
-          disabled={!isStarted}
+          disabled={!isStarted || currentIndex === numbers.length}
         >
           Next
         </button>
-        <button onClick={resetNumbers} disabled={!isStarted && numbers.length === 0}>
+        <button onClick={resetNumbers} disabled={numbers.length === 0}>
           Reset
         </button>
       </div>
+
+      <div id="status-text">{statusText}</div>
     </div>
   );
 };

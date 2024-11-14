@@ -1,0 +1,96 @@
+/* Register Page Specific Styling */
+.register-page {
+    background-color: var(--kuning-terang);
+    color: var(--biru-gelap);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register-page h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.register-page .register-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.register-page .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-page label {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: var(--biru-gelap);
+}
+
+.register-page input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register-page input:focus {
+    border-color: var(--hijau-terang);
+}
+
+.register-page button.submit-button {
+    padding: 10px 20px;
+    background-color: var(--hijau-terang);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.register-page button.submit-button:hover {
+    background-color: var(--hijau-olive);
+}
+
+.register-page .error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.register-page .success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.register-page .redirect {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.register-page .redirect a {
+    text-decoration: none;
+    color: var(--hijau-terang);
+    font-weight: bold;
+}
+
+.register-page .redirect a:hover {
+    color: var(--hijau-olive);
+}
