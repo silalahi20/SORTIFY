@@ -7,7 +7,9 @@ import FeaturesSection from './components/FeaturesSection';
 import Footer from './components/Footer';
 import LearnPage from './components/LearnPage';
 import PracticePage from './components/PracticePage';
-import BubbleSortPracticePage from './components/BubbleSortPractice'; // Verify this file exists and is correctly named
+import BubbleSortPracticePage from './components/BubbleSortPractice'; 
+import InsertionSortPracticePage from './components/InsertionSortPractice'
+import SelectionSortPracticePage from './components/SelectionSortPractice'
 
 function App() {
   const featuresRef = useRef(null);
@@ -26,7 +28,9 @@ function App() {
           } />
           <Route path="/learn" element={<LearnPage />} />
           <Route path="/practice" element={<PracticePage />} />
-          <Route path="/practice/bubble-sort" element={<BubbleSortPracticePage />} /> {/* Ensure this route is correctly set up */}
+          <Route path="/practice/bubble-sort" element={<BubbleSortPracticePage />} />
+          <Route path="/practice/insertion-sort" element={<InsertionSortPracticePage />} />
+          <Route path="/practice/selection-sort" element={<SelectionSortPracticePage />} />
         </Routes>
       </div>
     </BrowserRouter>

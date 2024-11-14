@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+/* General Component Styling */
+.insertion-sort-container {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #dbe8f5;
+    color: #2d3436;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Input Section */
+.input-section {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-section input {
+  padding: 8px;
+  border: 2px solid #75B9BE;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.input-section label {
+  font-weight: 500;
+  color: #2d3436;
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.back-button img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+/* Number Container */
+#number-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  background: #dbe8f5;
+}
+
+/* Number Box Styling */
+.number {
+  background: #ffeaa7;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: not-allowed;
+  transition: transform 0.2s, background-color 0.3s;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}
+
+.number:not(.sorted-element):hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styles */
+.insertion-sort-container button {
+  margin-top: 10px;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  background: #75B9BE;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.insertion-sort-container button:hover:not(:disabled) {
+  background: linear-gradient(45deg, #74b9ff, #a29bfe);
+}
+
+.insertion-sort-container button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Controls Section */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 20px 0;
+}
+
+.controls button {
+  padding: 8px 15px;
+  background: #d7327a;
+  color: white;
+  border-radius: 20px;
+}
+
+.controls button:hover:not(:disabled) {
+  background: #e35593;
+}
+
+/* Status Text */
+#status-text {
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  font-size: 1.1em;
+  color: #d63031;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Highlight States */
+.current-element {
+  background-color: #007bff !important;
+  color: white !important;
+  border-color: #0056b3;
+  cursor: grab !important;
+}
+
+.compared-element {
+  background-color: #74b9ff !important;
+  color: white !important;
+  cursor: grab !important;
+}
+
+.sorted-element {
+  background-color: #28a745 !important;
+  color: white !important;
+  border-color: #1e7e34;
+}
+
+/* Sorting Complete Styles */
+.number-container.sorted-complete .number.sorted-element {
+  pointer-events: none;
+  cursor: default;
+  transition: none;
+}
+
+.sorted-complete .number:hover {
+  transform: none;
+  box-shadow: none;
+  cursor: default;
+}
+
+/* Animations */
+@keyframes highlight-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .controls button {
+    width: 100%;
+  }
+
+  .number {
+    font-size: 1rem;
+    padding: 12px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .insertion-sort-container {
+    padding: 10px;
+  }
+
+  .number {
+    font-size: 0.9rem;
+    padding: 10px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .controls button {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
+}
