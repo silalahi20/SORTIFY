@@ -31,3 +31,25 @@ export const fetchUserProfile = (token) => {
         }
     });
 };
+
+export const uploadProfileImage = async (formData, token) => {
+    try {
+        const response = await fetch('http://localhost:5000/api/users/upload-profile-pic', {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${token}`, // Menambahkan token untuk autentikasi
+            },
+            body: formData, // Mengirim FormData yang berisi gambar
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to upload image');
+        }
+
+        const data = await response.json();
+        return data; // Mengembalikan data gambar dari respons backend (misalnya URL gambar)
+    } catch (error) {
+        console.error('Error uploading profile picture:', error);
+        throw error; // Lempar error untuk ditangani di komponen
+    }
+};
