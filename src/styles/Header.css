@@ -64,3 +64,36 @@
   color: var(--biru-gelap); /* Olive saat hover */
   transform: translateY(-5px);
 }
+
+/* Tambahkan gaya untuk tombol Profil */
+.profile {
+  background-color: var(--biru-gelap);
+  color: white;
+  padding: 9px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px; /* Jarak dengan tombol logout */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.profile:hover {
+  color: #a9c25d; /* Light green on hover */
+}
+
+/* Tambahkan gaya untuk tombol Logout */
+.logout-button {
+  background-color: var(--merah); /* Warna merah untuk logout */
+  color: white;
+  padding: 9px 16px;
+  border-radius: 50px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #e57373;
+  transform: translateY(-5px);
+}

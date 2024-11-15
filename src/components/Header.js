@@ -1,14 +1,16 @@
-// src/components/Header.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import logo from '../img/logo.svg';
 import '../styles/Header.css';
 
 const Header = () => {
+  const { isLoggedIn } = useAuth();
+
   return (
     <header className="header">
       <div className="logo-container">
-        <Link to="/"> {""}
+        <Link to="/">
           <img src={logo} alt="SORTIFY Logo" className="logo" />
         </Link>
       </div>
@@ -20,7 +22,11 @@ const Header = () => {
           <li><Link to="/about-us">About Us</Link></li>
         </ul>
       </nav>
-      <Link to="/login" className="login">Login</Link>
+      {isLoggedIn ? (
+        <Link to="/profile" className="profile">Profile</Link>
+      ) : (
+        <Link to="/login" className="login">Login</Link>
+      )}
     </header>
   );
 };
