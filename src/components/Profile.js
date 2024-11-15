@@ -133,10 +133,10 @@ const Profile = () => {
             </div>
             <div className="text-center mt-4">
               <h2 className="text-xl font-semibold text-gray-800">
-                {userProfile ? userProfile.fullName : 'Nama Pengguna'}
+                {userProfile ? userProfile.fullName : 'Josia Silalahi'}
               </h2>
               <p className="text-gray-600">
-                {userProfile ? userProfile.email : 'user@example.com'}
+                {userProfile ? userProfile.email : 'josiasilalahi2004@gmail.com'}
               </p>
             </div>
           </div>
